@@ -1,26 +1,166 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #02040a;
+  /* Deep charcoal/blue black */
+  --color-foreground: #ffffff;
+
+  --color-primary-green: #A3D861;
+  --color-primary-blue: #0395B2;
+
+  --color-glass: rgba(255, 255, 255, 0.02);
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+
+  --animate-pulse-slow: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 10s ease-in-out infinite;
+  --animate-beam: beam 5s linear infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@keyframes float {
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(1deg);
   }
 }
 
+@keyframes beam {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+:root {
+  --brand-green: #A3D861;
+  --brand-blue: #0395B2;
+  color-scheme: dark;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Texture Overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 50;
+}
+
+@layer utilities {
+  .text-brand-gradient {
+    background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-green) 50%, #ffffff 100%);
+    background-size: 200% auto;
+    animation: textGradient 6s ease infinite;
+    @apply bg-clip-text text-transparent;
+  }
+
+  @keyframes textGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .glass-card {
+    @apply bg-glass backdrop-blur-2xl border border-glass-border rounded-[2rem] transition-all duration-500 relative overflow-hidden;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card:hover {
+    @apply border-white/20;
+    box-shadow: 0 20px 50px rgba(3, 149, 178, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  /* Responsive Typography */
+  .text-hero {
+    font-size: clamp(2.75rem, 10vw, 7rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+  }
+
+  .text-section-title {
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 w-full;
+  }
+
+  .button-primary {
+    @apply relative overflow-hidden bg-primary-green text-background font-black px-10 py-5 rounded-2xl transition-all active:scale-95 text-xl flex items-center justify-center gap-3;
+    box-shadow: 0 0 40px rgba(163, 216, 97, 0.3);
+  }
+
+  .button-primary:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 0 60px rgba(163, 216, 97, 0.5);
+  }
+
+  .button-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: beam 3s infinite;
+  }
+
+  .grid-pattern {
+    background-image: radial-gradient(circle at center, rgba(3, 149, 178, 0.07) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-blue);
 }
