@@ -70,25 +70,23 @@ export default function Home() {
                 name: 'Nim Academy',
                 description: 'Agentic AI Mastery',
                 order_id,
-                handler: async function (response: any) {
-                    try {
-                        // 3. Verify
-                        const verifyResponse = await axios.post(`${API_URL}/payment/verify`, {
-                            razorpay_order_id: response.razorpay_order_id,
-                            razorpay_payment_id: response.razorpay_payment_id,
-                            razorpay_signature: response.razorpay_signature,
-                            userDetails
-                        });
+                handler: function (response: any) {
+                    // Logic: Handler must complete synchronously and immediately to prevent Razorpay auto-refund.
+                    // Step 1: Immediately show success UI to the user
+                    handleSuccess();
 
-                        if (verifyResponse.data.status === 'success') {
-                            handleSuccess();
-                        } else {
-                            alert('Payment Verification Failed: ' + (verifyResponse.data.message || 'Unknown error'));
-                        }
-                    } catch (err) {
-                        console.error("Verification error", err);
-                        alert('Payment Verification Failed. Please contact support.');
-                    }
+                    // Step 2: Fire verification asynchronously (fire-and-forget)
+                    axios.post(`${API_URL}/payment/verify`, {
+                        razorpay_order_id: response.razorpay_order_id,
+                        razorpay_payment_id: response.razorpay_payment_id,
+                        razorpay_signature: response.razorpay_signature,
+                        userDetails
+                    }).then((res) => {
+                        console.log("✅ Background Verification Success:", res.data);
+                    }).catch((err) => {
+                        // Critical: Only log errors, do not alert the user or affect the UI.
+                        console.error("❌ Background Verification Failed:", err.response?.data || err.message);
+                    });
                 },
                 prefill: {
                     name: userDetails.name,
