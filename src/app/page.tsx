@@ -16,7 +16,7 @@ import Footer from '../components/Footer';
 import PaymentModal from '../components/PaymentModal';
 import BackgroundEffects from '../components/BackgroundEffects';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:10000') + '/api';
 
 export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -63,8 +63,8 @@ export default function Home() {
                 return { data: { id: "demo_" + Math.random(), amount: 349900, currency: "INR" } };
             });
 
-            const { id: order_id, amount, currency } = orderResponse.data;
-            const rzpKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
+            const { order_id, amount, currency } = orderResponse.data;
+            const rzpKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY;
 
             // 2. Razorpay Options
             const options = {
@@ -77,7 +77,7 @@ export default function Home() {
                 handler: async function (response: any) {
                     try {
                         // 3. Verify
-                        const verifyResponse = await axios.post(`${API_URL}/payment/verify`, {
+                        const verifyResponse = await axios.post(`${API_URL}/verify`, {
                             razorpay_order_id: response.razorpay_order_id,
                             razorpay_payment_id: response.razorpay_payment_id,
                             razorpay_signature: response.razorpay_signature,
