@@ -55,12 +55,12 @@ export default function Home() {
         try {
             // 1. Create Order
             const orderResponse = await axios.post(`${API_URL}/payment/order`, {
-                amount: 349900,
+                amount: 100,
                 currency: 'INR',
                 receipt: `receipt_${Date.now()}`
             }).catch(err => {
                 console.warn("Backend not available, using demo order");
-                return { data: { id: "demo_" + Math.random(), amount: 349900, currency: "INR" } };
+                return { data: { id: "demo_" + Math.random(), amount: 100, currency: "INR" } };
             });
 
             const { order_id, amount, currency } = orderResponse.data;
