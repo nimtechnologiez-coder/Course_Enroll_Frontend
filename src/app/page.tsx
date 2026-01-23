@@ -54,17 +54,13 @@ export default function Home() {
         setLoading(true);
         try {
             // 1. Create Order
-            const orderResponse = await axios.post(`${API_URL}/payment/order`, {
-                amount: 100,
-                currency: 'INR',
-                receipt: `receipt_${Date.now()}`
-            }).catch(err => {
-                console.warn("Backend not available, using demo order");
-                return { data: { id: "demo_" + Math.random(), amount: 100, currency: "INR" } };
+            const orderResponse = await axios.post(`${API_URL}/payment/order`).catch(err => {
+                console.error("Order creation failed", err);
+                throw new Error("Failed to create order");
             });
 
             const { order_id, amount, currency } = orderResponse.data;
-            const rzpKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY;
+            const rzpKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
 
             // 2. Razorpay Options
             const options = {
@@ -77,18 +73,21 @@ export default function Home() {
                 handler: async function (response: any) {
                     try {
                         // 3. Verify
-                        const verifyResponse = await axios.post(`${API_URL}/verify`, {
+                        const verifyResponse = await axios.post(`${API_URL}/payment/verify`, {
                             razorpay_order_id: response.razorpay_order_id,
                             razorpay_payment_id: response.razorpay_payment_id,
                             razorpay_signature: response.razorpay_signature,
                             userDetails
-                        }).catch(() => ({ data: { status: 'success' } }));
+                        });
 
                         if (verifyResponse.data.status === 'success') {
                             handleSuccess();
+                        } else {
+                            alert('Payment Verification Failed: ' + (verifyResponse.data.message || 'Unknown error'));
                         }
                     } catch (err) {
-                        alert('Payment Verification Failed.');
+                        console.error("Verification error", err);
+                        alert('Payment Verification Failed. Please contact support.');
                     }
                 },
                 prefill: {
