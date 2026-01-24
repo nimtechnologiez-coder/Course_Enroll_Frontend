@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
-import { Brain, Twitter, Github, Linkedin, MessageSquare } from 'lucide-react';
+import { Brain, Instagram, Github, Linkedin, MessageSquare } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -19,9 +20,20 @@ const Footer = () => {
                             Join 1,200+ world-class engineers mastering the AIAgent stack.
                         </p>
                         <div className="flex gap-4">
-                            {[Twitter, Github, Linkedin, MessageSquare].map((Icon, idx) => (
-                                <a key={idx} href="#" className="p-3 rounded-xl bg-white/5 hover:bg-primary-blue/20 hover:text-primary-blue transition-all">
-                                    <Icon size={20} />
+                            {[
+                                { Icon: Instagram, href: "https://www.instagram.com/nim_academy?igsh=aHhta3Ywam1kMXlh" },
+                                { Icon: Github, href: "#" },
+                                { Icon: Linkedin, href: "#" },
+                                { Icon: MessageSquare, href: "#" }
+                            ].map((social, idx) => (
+                                <a
+                                    key={idx}
+                                    href={social.href}
+                                    target={social.href !== "#" ? "_blank" : undefined}
+                                    rel={social.href !== "#" ? "noopener noreferrer" : undefined}
+                                    className="p-3 rounded-xl bg-white/5 hover:bg-primary-blue/20 hover:text-primary-blue transition-all"
+                                >
+                                    <social.Icon size={20} />
                                 </a>
                             ))}
                         </div>
@@ -31,19 +43,20 @@ const Footer = () => {
                         <div className="space-y-6">
                             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Programs</h4>
                             <ul className="space-y-3 text-sm text-gray-500 font-medium">
-                                <li className="hover:text-white cursor-pointer transition-colors">Curriculum</li>
-                                <li className="hover:text-white cursor-pointer transition-colors">Certification</li>
-                                <li className="hover:text-white cursor-pointer transition-colors">Mentorship</li>
-                                <li className="hover:text-white cursor-pointer transition-colors">Pricing</li>
+                                <li className="hover:text-white transition-colors"><Link href="/curriculum">Curriculum</Link></li>
+                                <li className="hover:text-white transition-colors"><Link href="/certification">Certification</Link></li>
+                                <li className="hover:text-white transition-colors"><Link href="/mentorship">Mentorship</Link></li>
+                                <li className="hover:text-white transition-colors"><Link href="/pricing">Pricing</Link></li>
                             </ul>
                         </div>
                         <div className="space-y-6">
                             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Company</h4>
                             <ul className="space-y-3 text-sm text-gray-500 font-medium">
-                                <li className="hover:text-white cursor-pointer transition-colors">About Us</li>
-                                <li className="hover:text-white cursor-pointer transition-colors">Terms of Service</li>
-                                <li className="hover:text-white cursor-pointer transition-colors">Privacy Policy</li>
-                                <li className="hover:text-white cursor-pointer transition-colors">Contact</li>
+                                <li className="hover:text-white transition-colors"><Link href="/about-us">About Us</Link></li>
+                                <li className="hover:text-white transition-colors"><Link href="/terms-of-service">Terms of Service</Link></li>
+                                <li className="hover:text-white transition-colors"><Link href="/privacy-policy">Piracy Policy</Link></li>
+                                <li className="hover:text-white transition-colors"><Link href="/refund">Refund Policy</Link></li>
+                                <li className="hover:text-white transition-colors"><Link href="/contact">Contact</Link></li>
                             </ul>
                         </div>
                     </div>

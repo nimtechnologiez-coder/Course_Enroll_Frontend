@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Menu, X, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -16,10 +17,10 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
     }, []);
 
     const navLinks = [
-        { name: 'Curriculum', href: '#curriculum' },
-        { name: 'Projects', href: '#benefits' },
-        { name: 'For Who?', href: '#who' },
-        { name: 'Certificate', href: '#certification' },
+        { name: 'Programs', href: '/programs' },
+        { name: 'Curriculum', href: '/curriculum' },
+        { name: 'Mentorship', href: '/mentorship' },
+        { name: 'Pricing', href: '/pricing' },
     ];
 
     return (
@@ -31,7 +32,7 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
         >
             <div className="container-custom flex items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Link href="/" className="flex items-center gap-3 group cursor-pointer">
                     <img
                         src="/brand/logo.png"
                         alt="Nim Academy"
@@ -40,18 +41,18 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                     <span className="text-xl font-black tracking-tighter text-white hidden sm:block">
                         Nim <span className="text-primary-blue">Academy</span>
                     </span>
-                </div>
+                </Link>
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-10">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
                             href={link.href}
                             className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-white transition-colors"
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
                     <button
                         onClick={onEnroll}
@@ -81,14 +82,14 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                     >
                         <div className="container-custom py-8 flex flex-col gap-6">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="text-2xl font-black tracking-tighter text-white"
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
                             <button
                                 onClick={() => {
