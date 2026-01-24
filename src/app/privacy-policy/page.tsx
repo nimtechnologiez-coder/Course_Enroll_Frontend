@@ -9,7 +9,6 @@ export default function PrivacyPage() {
             subtitle="Protecting our Intellectual Property"
         >
             <div className="space-y-12 text-gray-400">
-                <p className="pt-2 text-xs font-medium text-gray-600">Effective Date: [DD/MM/YYYY]</p>
 
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">1. Strictly Prohibited</h3>

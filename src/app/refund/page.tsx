@@ -21,7 +21,7 @@ export default function RefundPage() {
                     <p className="leading-relaxed">
                         Refund requests before access may be approved after deducting gateway and processing charges (up to 10%).
                         <br />
-                        Requests must be sent within 48 hours of payment to: <span className="text-primary-blue">support@nimacademy.in</span>
+                        Requests must be sent within 48 hours of payment to: <span className="text-primary-blue">contactnimacademy@gmail.com</span>
                     </p>
                 </section>
 
