@@ -16,7 +16,7 @@ import Footer from '../components/Footer';
 import PaymentModal from '../components/PaymentModal';
 import BackgroundEffects from '../components/BackgroundEffects';
 
-const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000') + '/api';
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://course-enroll-backend.onrender.com') + '/api';
 
 
 export default function Home() {
@@ -57,7 +57,8 @@ export default function Home() {
             // 1. Create Order
             const orderResponse = await axios.post(`${API_URL}/payment/order`).catch(err => {
                 console.error("Order creation failed", err);
-                throw new Error("Failed to create order");
+                const errorMessage = err.response?.data?.details || err.response?.data?.message || err.message || "Failed to create order";
+                throw new Error(errorMessage);
             });
 
             const { order_id, amount, currency } = orderResponse.data;
