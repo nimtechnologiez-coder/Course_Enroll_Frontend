@@ -16,7 +16,8 @@ import Footer from '../components/Footer';
 import PaymentModal from '../components/PaymentModal';
 import BackgroundEffects from '../components/BackgroundEffects';
 
-const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:10000') + '/api';
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000') + '/api';
+
 
 export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -100,9 +101,11 @@ export default function Home() {
 
             const rzp = (window as any).Razorpay(options);
             rzp.open();
-        } catch (error) {
-            alert('Checkout Failed to Initialize.');
+        } catch (error: any) {
+            console.error('Checkout Error:', error);
+            alert(`Checkout Failed to Initialize: ${error.message || 'Network Error'}`);
         } finally {
+
             setLoading(false);
         }
     };
