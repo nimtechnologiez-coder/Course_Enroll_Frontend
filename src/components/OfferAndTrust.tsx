@@ -67,7 +67,7 @@ const Offer: React.FC<OfferProps> = ({ onEnroll }) => {
                             <div className="text-center lg:text-left space-y-10">
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-center lg:justify-start gap-4">
-                                        <span className="text-6xl md:text-8xl font-black">₹1</span>
+                                        <span className="text-7xl md:text-8xl font-black text-white tracking-tighter">₹5,000</span>
                                         <div className="flex flex-col">
                                             <span className="text-gray-600 line-through text-2xl font-bold">₹25,000</span>
                                             <span className="text-primary-green font-black text-xs uppercase tracking-widest mt-1">SAVE 99%</span>

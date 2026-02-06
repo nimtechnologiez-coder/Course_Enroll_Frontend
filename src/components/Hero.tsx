@@ -60,10 +60,9 @@ const Hero: React.FC<OfferProps> = ({ onEnroll }) => {
 
                     <div className="flex flex-col items-center sm:items-start">
                         <div className="flex items-center gap-6">
-                            <div className="text-4xl md:text-5xl font-black text-white">₹1</div>
-                            <div className="flex flex-col items-start leading-none">
-                                <span className="text-gray-600 line-through text-lg font-bold">₹25,000</span>
-                                <span className="text-primary-green font-black text-[10px] uppercase tracking-widest mt-1">Special Offer</span>
+                            <div className="flex flex-col">
+                                <span className="text-white text-4xl md:text-5xl font-black">₹5,000</span>
+                                <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">One-time payment</span>
                             </div>
                         </div>
                     </div>

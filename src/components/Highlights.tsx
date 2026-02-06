@@ -97,7 +97,7 @@ const WhatYouWillBuild = ({ onEnroll }: { onEnroll: (title?: string) => void }) 
                             <div className="mt-auto pt-8 border-t border-white/5 flex items-center justify-between gap-4">
                                 <div className="flex flex-col">
                                     <span className="text-[10px] font-bold text-gray-600 uppercase tracking-widest mb-0.5">Price</span>
-                                    <div className="text-2xl font-black text-white">₹1</div>
+                                    <div className="text-2xl font-black text-white">₹5,000</div>
                                 </div>
                                 <button
                                     onClick={() => onEnroll(p.title)}
