@@ -5,23 +5,23 @@ import { motion } from 'framer-motion';
 const modules = [
     {
         week: "Step 01",
-        title: "Agentic Reasoning",
-        desc: "Master ReAct loops, planning, and mental models of AI agents."
+        title: "Ethical Hacking Foundations",
+        desc: "Master network scanning, vulnerability assessment, and offensive security principles."
     },
     {
         week: "Step 02",
-        title: "Functional Tooling",
-        desc: "API integration, structured outputs, and real-time environment interaction."
+        title: "Cloud Infrastructure Security",
+        desc: "Secure AWS/Azure environments, IAM policies, and cloud-native defense strategies."
     },
     {
         week: "Step 03",
-        title: "Memory & Context",
-        desc: "Persistent RAG, vector stores, and long-term state management."
+        title: "Incident Response & SIEM",
+        desc: "Deploy Splunk/ELK, hunt for threats, and manage enterprise security operations."
     },
     {
         week: "Step 04",
-        title: "Deployment Swarms",
-        desc: "Orchestration, multi-agent communication, and production scaling."
+        title: "AI & ML in Defense",
+        desc: "Implement automated threat detection and neural network-based malware analysis."
     }
 ];
 
@@ -31,7 +31,7 @@ const Curriculum = () => {
             <div className="container-custom">
                 <div className="text-center mb-24">
                     <h2 className="text-section-title mb-4">Curriculum <span className="text-primary-blue text-glow">Roadmap.</span></h2>
-                    <p className="text-gray-500 max-w-xl mx-auto">A data-driven path from basic prompts to autonomous systems.</p>
+                    <p className="text-gray-500 max-w-xl mx-auto">A professional-grade path from basic concepts to industry-ready security expertise.</p>
                 </div>
 
                 <div className="max-w-4xl mx-auto space-y-12">

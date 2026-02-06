@@ -61,7 +61,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, title, subtitle }) =>
                 amount,
                 currency,
                 name: 'Nim Academy',
-                description: 'Agentic AI Mastery',
+                description: 'Cybersecurity Expert Program',
                 order_id,
                 handler: function (response: any) {
                     handleSuccess();

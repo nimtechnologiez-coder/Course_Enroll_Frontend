@@ -7,7 +7,7 @@ export default function CurriculumPage() {
     return (
         <PageLayout
             title="Curriculum"
-            subtitle="A rigorous, engineering-first approach to Agentic AI."
+            subtitle="A hands-on, industry-ready approach to modern Cybersecurity."
         >
             <div className="space-y-16">
                 <div>
@@ -23,9 +23,9 @@ export default function CurriculumPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/5">
                     {[
-                        { title: "Foundations", desc: "Mastering LLM reasoning and prompt-to-structure." },
-                        { title: "Infrastructure", desc: "Building the backbone: databases, memory, and tools." },
-                        { title: "Deployment", desc: "Scaling agents for production with robust monitoring." }
+                        { title: "Offensive Security", desc: "Mastering vulnerability research and penetration testing." },
+                        { title: "Cloud & Infrastructure", desc: "Building resilient cloud environments and secure networks." },
+                        { title: "AI Defense", desc: "Leveraging machine learning for automated threat detection." }
                     ].map((step, i) => (
                         <div key={i} className="p-8 rounded-2xl bg-white/5 border border-white/10">
                             <h4 className="text-primary-blue font-black uppercase tracking-widest text-xs mb-4">Step 0{i + 1}</h4>

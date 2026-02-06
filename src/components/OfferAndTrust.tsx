@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Clock, Gift, ShieldCheck, ArrowRight, Zap } from 'lucide-react';
 
 interface OfferProps {
-    onEnroll: () => void;
+    onEnroll: (courseTitle?: string) => void;
 }
 
 const Offer: React.FC<OfferProps> = ({ onEnroll }) => {
@@ -42,8 +42,8 @@ const Offer: React.FC<OfferProps> = ({ onEnroll }) => {
                         </motion.div>
 
                         <h2 className="text-5xl md:text-8xl font-black mb-10 leading-[0.9] tracking-tighter">
-                            Ready to Lead the <br />
-                            <span className="text-brand-gradient">AI Revolution?</span>
+                            Ready to Secure the <br />
+                            <span className="text-brand-gradient">Digital World?</span>
                         </h2>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16 w-full max-w-5xl items-center">
@@ -67,10 +67,10 @@ const Offer: React.FC<OfferProps> = ({ onEnroll }) => {
                             <div className="text-center lg:text-left space-y-10">
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-center lg:justify-start gap-4">
-                                        <span className="text-6xl md:text-8xl font-black">₹3,499</span>
+                                        <span className="text-6xl md:text-8xl font-black">₹1</span>
                                         <div className="flex flex-col">
-                                            <span className="text-gray-600 line-through text-2xl font-bold">₹17,000</span>
-                                            <span className="text-primary-green font-black text-xs uppercase tracking-widest mt-1">SAVE 80%</span>
+                                            <span className="text-gray-600 line-through text-2xl font-bold">₹25,000</span>
+                                            <span className="text-primary-green font-black text-xs uppercase tracking-widest mt-1">SAVE 99%</span>
                                         </div>
                                     </div>
                                     <p className="text-gray-500 text-lg font-medium">Limited to the first 50 seats for this batch.</p>
@@ -78,7 +78,7 @@ const Offer: React.FC<OfferProps> = ({ onEnroll }) => {
 
                                 <div className="grid grid-cols-1 gap-5">
                                     {[
-                                        "Professional AI Engineering Certificate",
+                                        "Professional Cybersecurity Certificate",
                                         "LIFETIME Access to Video Modules",
                                         "Direct Mentorship Channel Access"
                                     ].map((txt, i) => (
@@ -95,7 +95,7 @@ const Offer: React.FC<OfferProps> = ({ onEnroll }) => {
 
                         <div className="mt-20 w-full max-w-sm">
                             <button
-                                onClick={onEnroll}
+                                onClick={() => onEnroll()}
                                 className="button-primary w-full group"
                             >
                                 <span>SECURE MY SEAT</span>

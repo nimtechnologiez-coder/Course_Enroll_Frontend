@@ -55,7 +55,7 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                         </Link>
                     ))}
                     <button
-                        onClick={onEnroll}
+                        onClick={() => onEnroll()}
                         className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-background transition-all"
                     >
                         Enroll Now

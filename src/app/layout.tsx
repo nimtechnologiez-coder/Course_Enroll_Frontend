@@ -12,8 +12,8 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Agentic AI Mastery | Nim Academy",
-  description: "Master the art of building autonomous AI agents using Large Language Models.",
+  title: "Cybersecurity Expert Program | Nim Academy",
+  description: "Master Ethical Hacking, Cloud Security, SIEM, and AI in Cybersecurity. Join our industry-ready program.",
 };
 
 export default function RootLayout({

@@ -6,8 +6,8 @@ import { Check, Shield } from 'lucide-react';
 export default function PricingPage() {
     return (
         <PageLayout
-            title="Transparent Pricing"
-            subtitle="One price. Lifetime access. Unlimited potential."
+            title="Cybersecurity Mastery"
+            subtitle="Industry-leading training. Professional certification. Career-ready skills."
         >
             <div className="flex flex-col items-center">
                 <div className="w-full max-w-lg p-12 rounded-[3rem] bg-white/[0.03] border border-white/10 relative overflow-hidden group">
@@ -16,22 +16,22 @@ export default function PricingPage() {
                     </div>
 
                     <div className="mb-10">
-                        <h3 className="text-xl font-black uppercase tracking-[0.3em] text-primary-blue mb-4">Mastery Pass</h3>
+                        <h3 className="text-xl font-black uppercase tracking-[0.3em] text-primary-blue mb-4">Cyber Expert Pass</h3>
                         <div className="flex items-baseline gap-4">
-                            <span className="text-7xl font-black text-white">₹3,499</span>
-                            <span className="text-gray-500 line-through text-2xl font-bold">₹17,000</span>
+                            <span className="text-7xl font-black text-white">₹1</span>
+                            <span className="text-gray-500 line-through text-2xl font-bold">₹25,000</span>
                         </div>
-                        <p className="text-primary-green font-black uppercase tracking-widest text-[10px] mt-4">Limited Early Bird Offer</p>
+                        <p className="text-primary-green font-black uppercase tracking-widest text-[10px] mt-4">Full Program Enrollment</p>
                     </div>
 
                     <ul className="space-y-6 mb-12">
                         {[
-                            "Full Agentic AI Curriculum",
-                            "Real-world Capstone Projects",
+                            "Ethical Hacking & Pentesting",
+                            "Cloud Security (AWS/Azure)",
+                            "SIEM & Incident Response",
+                            "AI in Cybersecurity",
                             "Verifiable Certification",
-                            "Private Discord Access",
-                            "Weekly Mentor Office Hours",
-                            "Lifetime License & Updates"
+                            "Lifetime Access to Resources"
                         ].map((item, i) => (
                             <li key={i} className="flex items-center gap-4 text-gray-300 font-medium">
                                 <Check size={20} className="text-primary-green" />

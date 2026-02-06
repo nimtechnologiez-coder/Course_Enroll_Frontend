@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Zap } from 'lucide-react';
 import axios from 'axios';
 import confetti from 'canvas-confetti';
 
@@ -21,7 +23,9 @@ const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://course-enroll-backe
 
 export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedCourse, setSelectedCourse] = useState('Cybersecurity Expert Program');
     const [loading, setLoading] = useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
 
     // Load Razorpay Script
     useEffect(() => {
@@ -34,20 +38,32 @@ export default function Home() {
         };
     }, []);
 
-    const handleEnrollClick = () => {
-        setIsModalOpen(true);
+    const handleEnrollClick = (courseTitle?: string) => {
+        if (courseTitle && typeof courseTitle === 'string') {
+            setSelectedCourse(courseTitle);
+            setIsModalOpen(true);
+        } else {
+            const element = document.getElementById('benefits');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     };
-
     const handleSuccess = () => {
         setLoading(false);
+        setShowSuccess(true);
         confetti({
             particleCount: 150,
             spread: 100,
             origin: { y: 0.7 },
             colors: ['#A3D861', '#0395B2', '#ffffff']
         });
-        alert('Enrollment Successful! Welcome to the squad.');
-        window.location.href = 'https://chat.whatsapp.com/KGkihPGklz06HPXyQUGEZJ';
+
+        // Redirect after 3 seconds to allow user to see the success message
+        setTimeout(() => {
+            window.location.href = 'https://chat.whatsapp.com/KGkihPGklz06HPXyQUGEZJ';
+        }, 3000);
+
         setIsModalOpen(false);
     };
 
@@ -70,7 +86,7 @@ export default function Home() {
                 amount,
                 currency,
                 name: 'Nim Academy',
-                description: 'Agentic AI Mastery',
+                description: selectedCourse,
                 order_id,
                 handler: function (response: any) {
                     // Logic: Handler must complete synchronously and immediately to prevent Razorpay auto-refund.
@@ -119,13 +135,14 @@ export default function Home() {
             <div className="relative z-10">
                 <Hero onEnroll={handleEnrollClick} />
                 <TrustStrip />
-                <WhatYouWillBuild />
+                <WhatYouWillBuild onEnroll={handleEnrollClick} />
                 <Curriculum />
                 <WhoThisIsFor />
                 <Certification />
                 <Offer onEnroll={handleEnrollClick} />
                 <Footer />
             </div>
+
 
             <PaymentModal
                 isOpen={isModalOpen}
@@ -139,6 +156,32 @@ export default function Home() {
                         <div className="w-16 h-16 border-4 border-primary-blue border-t-primary-green rounded-full animate-spin shadow-[0_0_30px_rgba(3,149,178,0.3)]" />
                         <p className="text-sm font-black tracking-[0.4em] uppercase text-primary-blue">Initializing Infrastructure</p>
                     </div>
+                </div>
+            )}
+
+            {showSuccess && (
+                <div className="fixed inset-0 z-[250] bg-background flex items-center justify-center p-6 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="max-w-md space-y-8"
+                    >
+                        <div className="w-24 h-24 rounded-full bg-primary-green/10 flex items-center justify-center text-primary-green mx-auto border border-primary-green/20 shadow-[0_0_50px_rgba(163,216,97,0.2)]">
+                            <Zap size={40} className="animate-pulse" />
+                        </div>
+                        <div className="space-y-4">
+                            <h2 className="text-4xl font-black tracking-tighter text-white">Payment Received!</h2>
+                            <p className="text-gray-400 font-medium">Welcome to the Cybersecurity Expert Program. Redirecting you to the Academy WhatsApp Squad...</p>
+                        </div>
+                        <div className="w-full bg-white/5 h-1 rounded-full overflow-hidden">
+                            <motion.div
+                                initial={{ width: "0%" }}
+                                animate={{ width: "100%" }}
+                                transition={{ duration: 3 }}
+                                className="h-full bg-primary-green shadow-[0_0_15px_rgba(163,216,97,0.5)]"
+                            />
+                        </div>
+                    </motion.div>
                 </div>
             )}
         </main>

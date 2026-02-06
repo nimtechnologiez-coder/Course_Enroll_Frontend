@@ -5,36 +5,54 @@ import PageLayout from '../../components/PageLayout';
 export default function ProgramsPage() {
     return (
         <PageLayout
-            title="Our Programs"
-            subtitle="Master the future of AI with our elite engineering tracks."
+            title="Cybersecurity Track"
+            subtitle="Four specialized modules designed for modern security professionals."
         >
             <div className="space-y-12">
                 <div>
-                    <h3 className="text-3xl font-black text-white mb-6">Agentic AI Mastery</h3>
+                    <h3 className="text-3xl font-black text-white mb-6">Course Modules</h3>
                     <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                        Our flagship program designed for world-class engineers. Move from prompt engineering to infrastructure architecture.
-                        Learn to build autonomous, self-correcting agents that can reason and execute complex workflows.
+                        Our program covers the entire spectrum of modern cybersecurity, from fundamental hacking techniques to advanced AI-driven defense strategies.
                     </p>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         {[
-                            "Llama 3.1 & GPT-4o Multi-Agent Systems",
-                            "Advanced RAG Architectures",
-                            "Agentic Workflow Design",
-                            "Self-Correction & Reasoning Patterns"
-                        ].map((item, i) => (
-                            <li key={i} className="flex items-center gap-4 text-white font-medium">
-                                <div className="w-2 h-2 rounded-full bg-primary-green" />
-                                {item}
-                            </li>
+                            {
+                                title: "Ethical Hacking & Penetration Testing",
+                                features: ["Network Vulnerability Assessment", "Web Application Hacking", "Wireless Security Analysis"]
+                            },
+                            {
+                                title: "AWS, Azure & Cloud Security",
+                                features: ["Cloud Infrastructure Hardening", "Identity & Access Management", "Serverless Security Patterns"]
+                            },
+                            {
+                                title: "SIEM, Incident Response & Monitoring",
+                                features: ["Threat Hunting & Detection", "Log Analysis & Correlation", "Crisis Resolution Strategies"]
+                            },
+                            {
+                                title: "AI & Machine Learning in Cybersecurity",
+                                features: ["Neural Network Threat Detection", "Automated Malware Analysis", "Adversarial Machine Learning"]
+                            }
+                        ].map((module, idx) => (
+                            <div key={idx} className="space-y-4">
+                                <h4 className="text-xl font-bold text-primary-blue">{module.title}</h4>
+                                <ul className="space-y-3">
+                                    {module.features.map((item, i) => (
+                                        <li key={i} className="flex items-center gap-4 text-gray-400 font-medium text-sm">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-primary-green" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 </div>
 
                 <div className="pt-12 border-t border-white/5">
-                    <h3 className="text-3xl font-black text-white mb-6">Enterprise SDK Track</h3>
+                    <h3 className="text-3xl font-black text-white mb-6">Professional Certification</h3>
                     <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                        Specialized training for integrating AI agents at scale within enterprise environments.
-                        Focused on security, observability, and cost-optimization.
+                        Upon completion, receive an industry-recognized certification verified on the blockchain.
+                        Demonstrate your expertise in Cloud Security and AI-driven defense mechanisms.
                     </p>
                 </div>
             </div>

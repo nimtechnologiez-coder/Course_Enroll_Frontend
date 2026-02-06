@@ -12,12 +12,12 @@ const benefits = [
     {
         icon: <TrendingUp className="text-primary-blue" />,
         title: "Career Elevation",
-        desc: "Position yourself as a lead AI Engineer. Agents are the most sought-after skill in 2026."
+        desc: "Position yourself as an elite Security Expert. Cybersecurity is a top-priority skill globally."
     },
     {
         icon: <Briefcase className="text-primary-green" />,
-        title: "Portfolio Ready",
-        desc: "Ship 4 production-grade agents to your GitHub. Show, don't just tell."
+        title: "Industry Ready",
+        desc: "Master hands-on skills in Ethical Hacking, Cloud Security, and AI defense. Show, don't just tell."
     }
 ];
 
@@ -44,14 +44,14 @@ const Certification = () => {
                                     </div>
                                     <div className="text-right">
                                         <div className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-500">Certificate ID</div>
-                                        <div className="text-xs font-mono text-primary-blue">#AGENTIC-2026-NIM</div>
+                                        <div className="text-xs font-mono text-primary-blue">#CYBER-2026-NIM</div>
                                     </div>
                                 </div>
 
                                 <div className="space-y-6">
                                     <h3 className="text-3xl md:text-4xl font-black tracking-tighter">Certificate of <br />Technical Mastery.</h3>
                                     <div className="h-px w-full bg-linear-to-r from-white/20 to-transparent" />
-                                    <p className="text-sm text-gray-400 font-medium">This certifies that the recipient has successfully architected, deployed, and validated autonomous multi-agent AI systems.</p>
+                                    <p className="text-sm text-gray-400 font-medium">This certifies that the recipient has successfully mastered Ethical Hacking, Cloud Security, and AI-driven defense mechanisms.</p>
                                 </div>
 
                                 <div className="flex justify-between items-end border-t border-white/10 pt-8">

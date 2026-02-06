@@ -7,17 +7,17 @@ const targets = [
     {
         icon: <User />,
         title: "Students",
-        desc: "Build a standout AI engineering portfolio before graduation."
+        desc: "Build a standout cybersecurity portfolio and land high-paying security roles."
     },
     {
         icon: <Briefcase />,
         title: "Professionals",
-        desc: "Upskill to become the AI lead in your current tech organization."
+        desc: "Upskill to become a Security Lead or Cloud Architect in your organization."
     },
     {
         icon: <GraduationCap />,
-        title: "Teaching Staff",
-        desc: "Learn modern agentic workflows to mentor the next generation."
+        title: "Security Aspirants",
+        desc: "Transition from IT or Development into the high-demand field of Cybersecurity."
     }
 ];
 
