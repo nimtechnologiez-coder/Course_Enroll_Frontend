@@ -18,8 +18,11 @@ export default function PricingPage() {
                     <div className="mb-10">
                         <h3 className="text-xl font-black uppercase tracking-[0.3em] text-primary-blue mb-4">Cyber Expert Pass</h3>
                         <div className="flex items-baseline gap-4">
-                            <span className="text-6xl font-black text-white">₹5,000</span>
-                            <span className="text-gray-500 line-through text-2xl font-bold">₹25,000</span>
+                            <span className="text-7xl md:text-8xl font-black text-white tracking-tighter">₹5,000</span>
+                            <div className="flex flex-col">
+                                <span className="text-gray-600 line-through text-2xl font-bold">₹35,000</span>
+                                <span className="text-primary-green font-black text-xs uppercase tracking-widest mt-1">SAVE 85%</span>
+                            </div>
                         </div>
                         <p className="text-primary-green font-black uppercase tracking-widest text-[10px] mt-4">Full Program Enrollment</p>
                     </div>
