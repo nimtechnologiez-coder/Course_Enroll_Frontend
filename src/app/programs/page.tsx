@@ -25,7 +25,7 @@ export default function ProgramsPage() {
                                 features: ["Cloud Infrastructure Hardening", "Identity & Access Management", "Serverless Security Patterns"]
                             },
                             {
-                                title: "SIEM, Incident Response & Monitoring",
+                                title: "SOC Engineering",
                                 features: ["Threat Hunting & Detection", "Log Analysis & Correlation", "Crisis Resolution Strategies"]
                             },
                             {

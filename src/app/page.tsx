@@ -40,7 +40,7 @@ export default function Home() {
 
     const handleEnrollClick = (courseTitle?: string) => {
         if (courseTitle && typeof courseTitle === 'string') {
-            setSelectedCourse(courseTitle);
+            setSelectedCourse(decodeURIComponent(courseTitle));
             setIsModalOpen(true);
         } else {
             const element = document.getElementById('benefits');
@@ -171,7 +171,7 @@ export default function Home() {
                         </div>
                         <div className="space-y-4">
                             <h2 className="text-4xl font-black tracking-tighter text-white">Payment Received!</h2>
-                            <p className="text-gray-400 font-medium">Welcome to the Cybersecurity Expert Program. Redirecting you to the Academy WhatsApp Squad...</p>
+                            <p className="text-gray-400 font-medium">Welcome to the {decodeURIComponent(selectedCourse)}. Redirecting you to the Academy WhatsApp Squad...</p>
                         </div>
                         <div className="w-full bg-white/5 h-1 rounded-full overflow-hidden">
                             <motion.div
