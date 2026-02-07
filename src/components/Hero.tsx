@@ -54,14 +54,14 @@ const Hero: React.FC<OfferProps> = ({ onEnroll }) => {
                         onClick={() => onEnroll()}
                         className="button-primary group w-full sm:w-auto"
                     >
-                        <span>Enroll Now</span>
+                        <span>Book Your Slot</span>
                         <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
                     </button>
 
                     <div className="flex flex-col items-center sm:items-start">
                         <div className="flex items-center gap-6">
                             <div className="flex flex-col">
-                                <span className="text-gray-500 line-through text-lg md:text-xl font-bold">₹35,000</span>
+                                {/* <span className="text-gray-500 line-through text-lg md:text-xl font-bold">₹35,000</span> */}
                                 <span className="text-white text-4xl md:text-5xl font-black">₹5,000</span>
                                 <span className="text-primary-green text-[10px] uppercase tracking-widest font-black mt-1">Special Launch Offer</span>
                             </div>
