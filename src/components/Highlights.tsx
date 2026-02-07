@@ -11,6 +11,8 @@ const projects = [
         skills: ["Vuln Assessment", "Exploit Dev"],
         duration: "160 Hours",
         price: 45000,
+        originalPrice: 90000,
+        tagline: "Most Popular",
         num: "01"
     },
     {
@@ -20,6 +22,8 @@ const projects = [
         skills: ["Cloud Hardening", "IAM Security"],
         duration: "60 Hours",
         price: 50000,
+        originalPrice: 100000,
+        tagline: "Industry Standard",
         num: "02"
     },
     {
@@ -29,6 +33,8 @@ const projects = [
         skills: ["Threat Hunting", "Log Analysis"],
         duration: "75 Hours",
         price: 40000,
+        originalPrice: 85000,
+        tagline: "Blue Team Role",
         num: "03"
     },
     {
@@ -38,6 +44,8 @@ const projects = [
         skills: ["ML Detection", "Malware AI"],
         duration: "180 Hours",
         price: 45000,
+        originalPrice: 95000,
+        tagline: "Future Tech",
         num: "04"
     },
     {
@@ -48,6 +56,8 @@ const projects = [
         skills: ["AWS DevOps", "Automation"],
         duration: "250 Hours",
         price: 60000,
+        originalPrice: 120000,
+        tagline: "Career Accelerator",
         num: "05"
     },
     {
@@ -57,6 +67,8 @@ const projects = [
         skills: ["SAP MM", "Procurement"],
         duration: "120 Hours",
         price: 45000,
+        originalPrice: 85000,
+        tagline: "Enterprise Ready",
         num: "06"
     },
     {
@@ -66,6 +78,8 @@ const projects = [
         skills: ["Networking", "CCNA Cert"],
         duration: "160 Hours",
         price: 40000,
+        originalPrice: 75000,
+        tagline: "Foundational",
         num: "07"
     },
     {
@@ -75,6 +89,8 @@ const projects = [
         skills: ["Vulnerability Research", "Bug Hunting"],
         duration: "60 Hours",
         price: 25000,
+        originalPrice: 55000,
+        tagline: "Earn While Learning",
         num: "08"
     }
 ];
@@ -98,7 +114,7 @@ const WhatYouWillBuild = ({ onEnroll }: { onEnroll: (title?: string) => void }) 
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {projects.map((p, i) => (
                         <motion.div
                             key={i}
@@ -153,9 +169,15 @@ const WhatYouWillBuild = ({ onEnroll }: { onEnroll: (title?: string) => void }) 
 
                             {/* Card Footer: Price, Duration & Button (Pinned to Bottom) */}
                             <div className="mt-auto space-y-6">
-                                <div className="flex items-end justify-between gap-4 h-[50px]">
-                                    <div className="flex flex-col mb-1">
-                                        <span className="text-[10px] font-bold text-gray-600 uppercase tracking-widest mb-0.5">Price</span>
+                                <div className="flex items-end justify-between gap-4 min-h-[70px]">
+                                    <div className="flex flex-col">
+                                        <span className="text-[10px] font-black text-transparent bg-clip-text bg-linear-to-r from-primary-blue to-primary-green uppercase tracking-widest mb-1">
+                                            Limited Period Offer
+                                        </span>
+                                        <span className="text-lg font-bold text-gray-500 line-through mb-0.5">
+                                            {/* @ts-ignore */}
+                                            {p.originalPrice ? `₹${p.originalPrice.toLocaleString('en-IN')}` : '₹80,000'}
+                                        </span>
                                         {/* @ts-ignore */}
                                         <div className="text-2xl font-black text-white whitespace-nowrap">₹{p.price ? p.price.toLocaleString('en-IN') : '5,000'}</div>
                                     </div>
