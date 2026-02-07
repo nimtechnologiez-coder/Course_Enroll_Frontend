@@ -61,7 +61,7 @@ export default function Home() {
 
         // Redirect after 3 seconds to allow user to see the success message
         setTimeout(() => {
-            window.location.href = 'https://chat.whatsapp.com/KGkihPGklz06HPXyQUGEZJ';
+            window.location.href = 'https://chat.whatsapp.com/HkUqXUyuc58EJ3KOD2jBvP';
         }, 3000);
 
         setIsModalOpen(false);

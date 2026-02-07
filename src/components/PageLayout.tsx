@@ -45,7 +45,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, title, subtitle }) =>
             colors: ['#A3D861', '#0395B2', '#ffffff']
         });
         alert('Enrollment Successful! Welcome to the squad.');
-        window.location.href = 'https://chat.whatsapp.com/KGkihPGklz06HPXyQUGEZJ';
+        window.location.href = 'https://chat.whatsapp.com/HkUqXUyuc58EJ3KOD2jBvP';
         setIsModalOpen(false);
     };
 
