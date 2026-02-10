@@ -20,7 +20,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h4 className="text-white font-bold mb-1">Email Support</h4>
-                                    <p className="text-gray-500">contactnimacademy@gmail.com</p>
+                                    <p className="text-gray-500">nimtechnologiez@gmail.com</p>
                                     {/* <p className="text-xs text-gray-600 mt-1">Response time: &lt; 24 hours</p> */}
                                 </div>
                             </div>
@@ -30,14 +30,14 @@ export default function ContactPage() {
                                     <MessageSquare size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold mb-1">Community Discord</h4>
-                                    <p className="text-gray-500">Join 1,200+ agents in our private server.</p>
+                                    <h4 className="text-white font-bold mb-1">Business Community</h4>
+                                    <p className="text-gray-500">Join 1,200+ businesses in our private network.</p>
                                     <p className="text-xs text-primary-green mt-1 cursor-pointer hover:underline">Access via Dashboard →</p>
                                 </div>
                             </div>
 
                             <a
-                                href="https://www.instagram.com/nim_academy?igsh=aHhta3Ywam1kMXlh"
+                                href="https://www.instagram.com/nimtechnologies?igsh=NWJma29iaWtmMTg3"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-start gap-6 group/link"
@@ -47,7 +47,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h4 className="text-white font-bold mb-1">Follow Updates</h4>
-                                    <p className="text-gray-500 group-hover/link:text-white transition-colors">@nim_academy</p>
+                                    <p className="text-gray-500 group-hover/link:text-white transition-colors">@nim_technologies</p>
                                 </div>
                             </a>
                         </div>

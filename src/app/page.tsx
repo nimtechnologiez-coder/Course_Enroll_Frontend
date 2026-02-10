@@ -7,13 +7,15 @@ import confetti from 'canvas-confetti';
 
 // Project Components (TSX)
 import Hero from '../components/Hero';
+import TrustBar from '../components/TrustBar';
 import Navbar from '../components/Navbar';
 import TrustStrip from '../components/TrustStrip';
 import WhatYouWillBuild from '../components/Highlights';
 import Curriculum from '../components/Timeline';
 import WhoThisIsFor from '../components/WhoCanJoin';
-import Certification from '../components/Certification';
 import Offer from '../components/OfferAndTrust';
+import ContactSection from '../components/ContactSection';
+import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import Footer from '../components/Footer';
 import PaymentModal from '../components/PaymentModal';
 import BackgroundEffects from '../components/BackgroundEffects';
@@ -23,7 +25,7 @@ const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://course-enroll-backe
 
 export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedCourse, setSelectedCourse] = useState('Cybersecurity Expert Program');
+    const [selectedCourse, setSelectedCourse] = useState('WhatsApp Lead Capture & Auto-Booking System');
     const [loading, setLoading] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
 
@@ -43,7 +45,7 @@ export default function Home() {
             setSelectedCourse(decodeURIComponent(courseTitle));
             setIsModalOpen(true);
         } else {
-            const element = document.getElementById('benefits');
+            const element = document.getElementById('pricing');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
@@ -85,7 +87,7 @@ export default function Home() {
                 key: rzpKey,
                 amount,
                 currency,
-                name: 'Nim Academy',
+                name: 'Nim Technologies',
                 description: selectedCourse,
                 order_id,
                 handler: function (response: any) {
@@ -134,14 +136,17 @@ export default function Home() {
 
             <div className="relative z-10">
                 <Hero onEnroll={handleEnrollClick} />
+                <TrustBar />
                 <TrustStrip />
                 <WhatYouWillBuild onEnroll={handleEnrollClick} />
                 <Curriculum />
                 <WhoThisIsFor />
-                <Certification />
                 <Offer onEnroll={handleEnrollClick} />
+                <ContactSection />
                 <Footer />
             </div>
+
+            <FloatingWhatsApp />
 
 
             <PaymentModal
@@ -170,8 +175,8 @@ export default function Home() {
                             <Zap size={40} className="animate-pulse" />
                         </div>
                         <div className="space-y-4">
-                            <h2 className="text-4xl font-black tracking-tighter text-white">Payment Received!</h2>
-                            <p className="text-gray-400 font-medium">Welcome to the {decodeURIComponent(selectedCourse)}. Redirecting you to the Academy WhatsApp Squad...</p>
+                            <h2 className="text-4xl font-black tracking-tighter text-white">Setup Initialized!</h2>
+                            <p className="text-gray-400 font-medium">Welcome to the future of business automation. Redirecting you to our support WhatsApp...</p>
                         </div>
                         <div className="w-full bg-white/5 h-1 rounded-full overflow-hidden">
                             <motion.div

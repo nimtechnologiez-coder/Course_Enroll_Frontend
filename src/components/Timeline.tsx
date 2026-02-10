@@ -2,40 +2,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const modules = [
+const steps = [
     {
         week: "Step 01",
-        title: "Ethical Hacking Foundations",
-        desc: "Master network scanning, vulnerability assessment, and offensive security principles."
+        title: "We connect your WhatsApp",
+        desc: "We securely connect your existing WhatsApp Business number to our automation engine. No new number needed."
     },
     {
         week: "Step 02",
-        title: "Cloud Infrastructure Security",
-        desc: "Secure AWS/Azure environments, IAM policies, and cloud-native defense strategies."
+        title: "We configure replies & booking flow",
+        desc: "Our team sets up your custom auto-replies, lead capture fields, and appointment booking logic based on your business."
     },
     {
         week: "Step 03",
-        title: "Incident Response & SIEM",
-        desc: "Deploy Splunk/ELK, hunt for threats, and manage enterprise security operations."
-    },
-    {
-        week: "Step 04",
-        title: "AI & ML in Defense",
-        desc: "Implement automated threat detection and neural network-based malware analysis."
+        title: "You start receiving confirmed customers",
+        desc: "Sit back and watch as your WhatsApp handles enquiries and books appointments automatically 24/7."
     }
 ];
 
-const Curriculum = () => {
+const HowItWorks = () => {
     return (
-        <section id="curriculum" className="py-24 md:py-40 bg-white/[0.01]">
+        <section id="how-it-works" className="py-24 md:py-40 bg-white/[0.01]">
             <div className="container-custom">
                 <div className="text-center mb-24">
-                    <h2 className="text-section-title mb-4">Curriculum <span className="text-primary-blue text-glow">Roadmap.</span></h2>
-                    <p className="text-gray-500 max-w-xl mx-auto">A professional-grade path from basic concepts to industry-ready security expertise.</p>
+                    <h2 className="text-section-title mb-4">How It <span className="text-primary-blue text-glow">Works.</span></h2>
+                    <p className="text-gray-500 max-w-xl mx-auto">No technical knowledge required. We set up everything for you in under 45 minutes.</p>
                 </div>
 
                 <div className="max-w-4xl mx-auto space-y-12">
-                    {modules.map((m, i) => (
+                    {steps.map((m, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, x: -20 }}
@@ -62,4 +57,4 @@ const Curriculum = () => {
     );
 };
 
-export default Curriculum;
+export default HowItWorks;

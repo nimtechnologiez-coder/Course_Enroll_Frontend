@@ -12,8 +12,11 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Cybersecurity Expert Program | Nim Academy",
-  description: "Master Ethical Hacking, Cloud Security, SIEM, and AI in Cybersecurity. Join our industry-ready program.",
+  title: "Nim Technologies | WhatsApp Automation System",
+  description: "WhatsApp Lead Capture & Auto-Booking System for clinics, salons and local businesses. Automate enquiries and convert messages into appointments.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

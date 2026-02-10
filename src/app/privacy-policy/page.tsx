@@ -52,7 +52,7 @@ export default function PrivacyPage() {
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">5. Reporting</h3>
                     <p className="leading-relaxed">
-                        Report misuse to: <span className="text-primary-blue">contactnimacademy@gmail.com</span>
+                        Report misuse to: <span className="text-primary-blue">nimtechnologiez@gmail.com</span>
                         <br />
                         Phone: <span className="text-white">+91 7397 224 594</span>
                     </p>

@@ -44,7 +44,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, title, subtitle }) =>
             origin: { y: 0.7 },
             colors: ['#A3D861', '#0395B2', '#ffffff']
         });
-        alert('Enrollment Successful! Welcome to the squad.');
+        alert('Setup Initialized! Welcome to Nim Technologies.');
         window.location.href = 'https://chat.whatsapp.com/HkUqXUyuc58EJ3KOD2jBvP';
         setIsModalOpen(false);
     };
@@ -60,8 +60,8 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, title, subtitle }) =>
                 key: rzpKey,
                 amount,
                 currency,
-                name: 'Nim Academy',
-                description: 'Cybersecurity Expert Program',
+                name: 'Nim Technologies',
+                description: 'WhatsApp Automation System',
                 order_id,
                 handler: function (response: any) {
                     handleSuccess();
@@ -132,7 +132,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, title, subtitle }) =>
                 <div className="fixed inset-0 z-[200] bg-background/80 backdrop-blur-xl flex items-center justify-center">
                     <div className="flex flex-col items-center gap-6">
                         <div className="w-16 h-16 border-4 border-primary-blue border-t-primary-green rounded-full animate-spin" />
-                        <p className="text-sm font-black tracking-[0.4em] uppercase text-primary-blue">Initializing</p>
+                        <p className="text-sm font-black tracking-[0.4em] uppercase text-primary-blue">Initializing Infrastructure</p>
                     </div>
                 </div>
             )}

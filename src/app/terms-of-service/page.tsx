@@ -6,17 +6,17 @@ export default function TermsPage() {
     return (
         <PageLayout
             title="Terms and Conditions"
-            subtitle="NIM Academy – Operated by NIM Technologies"
+            subtitle="Nim Technologies"
         >
             <div className="space-y-12 text-gray-400">
                 <p className="leading-relaxed italic">
-                    Welcome to NIM Academy, operated by NIM Technologies. By accessing our website, enrolling in any course, or purchasing any service, you agree to these Terms and Conditions.
+                    Welcome to Nim Technologies. By accessing our website, using our services, or purchasing any automation plan, you agree to these Terms and Conditions.
                 </p>
 
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">1. Services</h3>
                     <p className="leading-relaxed">
-                        We provide online/offline training programs, workshops, webinars, certifications, and learning materials. Course details are mentioned on respective course pages.
+                        We provide WhatsApp automation solutions, lead capture tools, and business AI services. Plan details are mentioned on respective service pages.
                     </p>
                 </section>
 
@@ -30,21 +30,21 @@ export default function TermsPage() {
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">3. Payments & Access</h3>
                     <p className="leading-relaxed">
-                        Course access is provided only after successful payment. Sharing login credentials is strictly prohibited. We may suspend accounts involved in misuse.
+                        Service access is provided only after successful payment. Sharing credentials is strictly prohibited. We may suspend accounts involved in misuse.
                     </p>
                 </section>
 
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">4. Intellectual Property</h3>
                     <p className="leading-relaxed">
-                        All videos, PDFs, assignments, recordings, and code belong to NIM Academy. Content is for personal learning only. Reproduction, resale, or sharing is prohibited.
+                        All software, code, and documentation belong to Nim Technologies. Materials are for your business use only. Reproduction, resale, or sharing is prohibited.
                     </p>
                 </section>
 
                 <section>
-                    <h3 className="text-xl font-bold text-white mb-4">5. Student Conduct</h3>
+                    <h3 className="text-xl font-bold text-white mb-4">5. User Conduct</h3>
                     <p className="leading-relaxed">
-                        Any abuse, disruption, piracy, or misconduct will result in termination without refund.
+                        Any abuse, disruption, automation misuse, or misconduct will result in termination without refund.
                     </p>
                 </section>
 

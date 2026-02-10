@@ -6,15 +6,15 @@ import CertificationSection from '../../components/Certification';
 export default function CertificationPage() {
     return (
         <PageLayout
-            title="Certification"
-            subtitle="Validate your mastery with the industry's most rigorous AI certificate."
+            title="Verification"
+            subtitle="Validate your system with the industry's most rigorous automation verification."
         >
             <div className="space-y-16">
                 <div>
-                    <h3 className="text-3xl font-black text-white mb-8">The Nim Academy Standard</h3>
+                    <h3 className="text-3xl font-black text-white mb-8">The Nim Technologies Standard</h3>
                     <p className="text-gray-400 text-lg leading-relaxed mb-12">
-                        Unlike traditional certificates, Nim Academy certification and verifiable credentials are awarded only after successful completion
-                        of the Capstone project. It represents real-world engineering capability.
+                        Unlike traditional tools, Nim Technologies verification and credentials are awarded only after successful testing
+                        of your automation flow. It represents real-world business capability.
                     </p>
                     <CertificationSection />
                 </div>

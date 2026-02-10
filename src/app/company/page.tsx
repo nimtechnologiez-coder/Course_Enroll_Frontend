@@ -6,7 +6,7 @@ export default function CompanyPage() {
     return (
         <PageLayout
             title="Our Company"
-            subtitle="Nim Academy: Building the workforce for the Agentic Era."
+            subtitle="Nim Technologies: Building the automation for the Agentic Era."
         >
             <div className="space-y-16">
                 <div>
@@ -32,7 +32,7 @@ export default function CompanyPage() {
                     <div>
                         <h4 className="text-xl font-bold text-white mb-4">Our Values</h4>
                         <p className="text-gray-500 leading-relaxed">
-                            Engineering excellence, radical transparency, and a relentless focus on builder-centric education.
+                            Engineering excellence, radical transparency, and a relentless focus on business-centric automation.
                         </p>
                     </div>
                 </div>

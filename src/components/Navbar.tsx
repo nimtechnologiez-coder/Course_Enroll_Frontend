@@ -17,10 +17,12 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
     }, []);
 
     const navLinks = [
-        { name: 'Programs', href: '/programs' },
-        { name: 'Curriculum', href: '/curriculum' },
-        { name: 'Mentorship', href: '/mentorship' },
-        { name: 'Pricing', href: '/pricing' },
+        { name: 'Home', href: '/' },
+        { name: 'Features', href: '#features' },
+        { name: 'How It Works', href: '#how-it-works' },
+        { name: 'Pricing', href: '#pricing' },
+        { name: "Who It's For", href: '#who' },
+        { name: 'Contact', href: '#contact' },
     ];
 
     return (
@@ -34,12 +36,12 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group cursor-pointer">
                     <img
-                        src="/brand/logo.png"
-                        alt="Nim Academy"
-                        className="h-10 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_15px_rgba(163,216,97,0.3)]"
+                        src="/logo.png"
+                        alt="Nim Technologies"
+                        className="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_15px_rgba(163,216,97,0.3)]"
                     />
-                    <span className="text-xl font-black tracking-tighter text-white hidden sm:block">
-                        Nim <span className="text-primary-blue">Academy</span>
+                    <span className="text-xl font-black tracking-tighter text-white block">
+                        Nim <span className="text-primary-blue">Technologies</span>
                     </span>
                 </Link>
 
@@ -54,11 +56,15 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                             {link.name}
                         </Link>
                     ))}
+
                     <button
-                        onClick={() => onEnroll()}
+                        onClick={() => {
+                            const element = document.getElementById('contact');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}
                         className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-background transition-all"
                     >
-                        Enroll Now
+                        Get Demo
                     </button>
                 </div>
 
@@ -94,11 +100,12 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                             <button
                                 onClick={() => {
                                     setIsMobileMenuOpen(false);
-                                    onEnroll();
+                                    const element = document.getElementById('contact');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
                                 }}
                                 className="w-full py-4 bg-primary-green text-background font-black rounded-xl flex items-center justify-center gap-3"
                             >
-                                Claim Your Spot <ArrowRight size={20} />
+                                Get Demo <ArrowRight size={20} />
                             </button>
                         </div>
                     </motion.div>

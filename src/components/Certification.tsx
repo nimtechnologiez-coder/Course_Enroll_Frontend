@@ -6,18 +6,18 @@ import { Award, Briefcase, GraduationCap, TrendingUp } from 'lucide-react';
 const benefits = [
     {
         icon: <Award className="text-primary-green" />,
-        title: "Verified Certificate",
-        desc: "Receive a cryptographically signed certificate of completion from Nim Academy."
+        title: "WhatsApp Auto-Reply Setup",
+        desc: "Instant automated responses to every enquiry on your business number."
     },
     {
         icon: <TrendingUp className="text-primary-blue" />,
-        title: "Career Elevation",
-        desc: "Position yourself as an elite Security Expert. Cybersecurity is a top-priority skill globally."
+        title: "Lead Capture & Tracking",
+        desc: "Automatically save lead details and track them in real-time."
     },
     {
         icon: <Briefcase className="text-primary-green" />,
-        title: "Industry Ready",
-        desc: "Master hands-on skills in Ethical Hacking, Cloud Security, and AI defense. Show, don't just tell."
+        title: "Appointment Templates",
+        desc: "Ready-made templates to confirm bookings instantly via WhatsApp."
     }
 ];
 
@@ -49,15 +49,15 @@ const Certification = () => {
                                 </div>
 
                                 <div className="space-y-6">
-                                    <h3 className="text-3xl md:text-4xl font-black tracking-tighter">Certificate of <br />Technical Mastery.</h3>
+                                    <h3 className="text-3xl md:text-4xl font-black tracking-tighter">Live Business <br />Automation.</h3>
                                     <div className="h-px w-full bg-linear-to-r from-white/20 to-transparent" />
-                                    <p className="text-sm text-gray-400 font-medium">This certifies that the recipient has successfully mastered Ethical Hacking, Cloud Security, and AI-driven defense mechanisms.</p>
+                                    <p className="text-sm text-gray-400 font-medium">This system handles auto-replies, lead capture, and appointment scheduling 24/7 on your existing WhatsApp number.</p>
                                 </div>
 
                                 <div className="flex justify-between items-end border-t border-white/10 pt-8">
                                     <div className="flex flex-col">
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-primary-green">Conducted By</span>
-                                        <span className="text-lg font-black italic">Nim Academy</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-primary-green">Developed By</span>
+                                        <span className="text-lg font-black italic">Nim Technologies</span>
                                     </div>
                                     <div className="w-24 h-24 border border-white/10 rounded-lg flex items-center justify-center opacity-40">
                                         <span className="text-[8px] font-black text-center rotate-45">AUTHENTIC SEAL</span>
@@ -70,9 +70,9 @@ const Certification = () => {
                     {/* Benefits Grid */}
                     <div className="flex-1 space-y-12">
                         <div>
-                            <div className="text-primary-green text-[10px] font-black uppercase tracking-[0.5em] mb-4">Value Proposition</div>
-                            <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">Tangible Value for <br />Your <span className="text-brand-gradient">Career.</span></h2>
-                            <p className="text-gray-500 text-lg leading-relaxed">We don't just teach theory. We provide the credentials and portfolio that open doors.</p>
+                            <div className="text-primary-green text-[10px] font-black uppercase tracking-[0.5em] mb-4">What You Get</div>
+                            <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">Everything You Need <br />To <span className="text-brand-gradient">Automate.</span></h2>
+                            <p className="text-gray-500 text-lg leading-relaxed">Runs 24/7, even when you are busy, offline, or closed. 30 days setup support included.</p>
                         </div>
 
                         <div className="grid grid-cols-1 gap-8">

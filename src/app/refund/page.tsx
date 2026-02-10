@@ -6,22 +6,22 @@ export default function RefundPage() {
     return (
         <PageLayout
             title="Refund & Cancellation Policy"
-            subtitle="NIM Academy"
+            subtitle="Nim Technologies"
         >
             <div className="space-y-12 text-gray-400">
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">1. No Refund After Access</h3>
                     <p className="leading-relaxed">
-                        Once course access is provided, live sessions attended, or materials accessed, no refund will be issued.
+                        Once system access is provided, setup is complete, or materials accessed, no refund will be issued.
                     </p>
                 </section>
 
                 <section>
-                    <h3 className="text-xl font-bold text-white mb-4">2. Before Course Access</h3>
+                    <h3 className="text-xl font-bold text-white mb-4">2. Before System Setup</h3>
                     <p className="leading-relaxed">
-                        Refund requests before access may be approved after deducting gateway and processing charges (up to 10%).
+                        Refund requests before setup may be approved after deducting gateway and processing charges (up to 10%).
                         <br />
-                        Requests must be sent within 48 hours of payment to: <span className="text-primary-blue">contactnimacademy@gmail.com</span>
+                        Requests must be sent within 48 hours of payment to: <span className="text-primary-blue">nimtechnologiez@gmail.com</span>
                     </p>
                 </section>
 
