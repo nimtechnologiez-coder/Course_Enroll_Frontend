@@ -1,65 +1,109 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Stethoscope, Scissors, UserCog, Home, School, Briefcase } from 'lucide-react';
+import { Clock, Users, Zap, TrendingUp } from 'lucide-react';
 
 const targets = [
     {
-        icon: <Stethoscope />,
-        title: "Clinics",
-        desc: "Automate appointments for dental, skin, and hair clinics."
+        icon: <Clock size={24} />,
+        title: "Small Businesses",
+        desc: "Handle every customer enquiry instantly without hiring extra staff."
     },
     {
-        icon: <Scissors />,
-        title: "Salons",
-        desc: "Hair and beauty salons receiving daily WhatsApp bookings."
+        icon: <Users size={24} />,
+        title: "Growing Companies",
+        desc: "Organize leads and track customer interactions automatically."
     },
     {
-        icon: <UserCog />,
-        title: "Consultants",
-        desc: "Legal, tax, and business consultants managing client meetings."
+        icon: <Zap size={24} />,
+        title: "Service Providers",
+        desc: "Convert enquiries into confirmed bookings automatically."
     },
     {
-        icon: <Home />,
-        title: "Real Estate",
-        desc: "Agents following up on property enquiries from Google Maps."
-    },
-    {
-        icon: <School />,
-        title: "Coaching Centres",
-        desc: "Institutes managing course enquiries and student admissions."
-    },
-    {
-        icon: <Briefcase />,
-        title: "Service Businesses",
-        desc: "Any local business that gets customer enquiries on WhatsApp."
+        icon: <TrendingUp size={24} />,
+        title: "Established Businesses",
+        desc: "Improve response speed and customer experience at scale."
     }
 ];
 
 const WhoThisIsFor = () => {
     return (
-        <section id="who" className="py-24 md:py-40">
-            <div className="container-custom">
-                <div className="text-center mb-24 space-y-4">
-                    <div className="text-[10px] font-black uppercase tracking-[0.5em] text-primary-blue">Target Businesses</div>
-                    <h2 className="text-section-title">Who This Is <span className="text-white/40">For.</span></h2>
+        <section id="who" className="py-32 md:py-48 relative overflow-hidden bg-background">
+            {/* Background Accent */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(3,149,178,0.03)_0%,transparent_70%)] pointer-events-none" />
+
+            <div className="container-custom relative z-10">
+                <div className="text-center mb-24 max-w-3xl mx-auto space-y-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-[10px] font-black uppercase tracking-[0.5em] text-primary-blue"
+                    >
+                        Universal Automation
+                    </motion.div>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-5xl md:text-7xl font-black mb-6 tracking-tighter"
+                    >
+                        Who This Is <span className="text-white/40">For.</span>
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-gray-400 text-lg md:text-xl font-medium"
+                    >
+                        Any business that receives customer enquiries and wants faster responses and more conversions.
+                    </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
                     {targets.map((t, i) => (
                         <motion.div
                             key={i}
-                            whileHover={{ scale: 1.02 }}
-                            className="p-10 rounded-3xl bg-linear-to-b from-white/5 to-transparent border border-primary-blue/20 flex flex-col items-center text-center gap-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                            whileHover={{ y: -10 }}
+                            className="group relative glass-card p-10 md:p-12 overflow-hidden border-white/5 hover:border-primary-blue/30 transition-all shadow-2xl"
                         >
-                            <div className="w-16 h-16 rounded-full bg-primary-blue/10 flex items-center justify-center text-primary-blue">
-                                {t.icon}
+                            {/* Left Accent Bar */}
+                            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-linear-to-b from-primary-blue to-primary-green opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                            <div className="relative z-10 space-y-6">
+                                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary-blue group-hover:bg-primary-blue group-hover:text-background transition-all duration-500 shadow-xl">
+                                    {t.icon}
+                                </div>
+                                <div className="space-y-3">
+                                    <h3 className="text-2xl font-black text-white tracking-tight">{t.title}</h3>
+                                    <p className="text-gray-500 text-lg font-medium leading-relaxed group-hover:text-gray-300 transition-colors">
+                                        {t.desc}
+                                    </p>
+                                </div>
                             </div>
-                            <h3 className="text-xl font-bold">{t.title}</h3>
-                            <p className="text-gray-500 text-sm leading-relaxed">{t.desc}</p>
+
+                            {/* Decorative Corner Accent */}
+                            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-primary-blue/5 blur-3xl rounded-full group-hover:bg-primary-blue/10 transition-colors" />
                         </motion.div>
                     ))}
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 }}
+                    className="mt-24 pt-12 border-t border-white/5 text-center"
+                >
+                    <p className="text-xs font-black uppercase tracking-[0.5em] text-gray-500/60">
+                        Works for businesses of all sizes and categories.
+                    </p>
+                </motion.div>
             </div>
         </section>
     );

@@ -32,7 +32,7 @@ const Hero: React.FC<OfferProps> = ({ onEnroll }) => {
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                     className="text-hero mb-8 tracking-[-0.07em]"
                 >
-                    Stop Losing Enquiries <br />
+                    Smart SEO Automation <br />
                     <span className="text-brand-gradient drop-shadow-[0_0_30px_rgba(3,149,178,0.3)]">on WhatsApp.</span>
                 </motion.h1>
 
@@ -52,6 +52,8 @@ const Hero: React.FC<OfferProps> = ({ onEnroll }) => {
                     className="text-gray-400 text-lg md:text-xl max-w-3xl mb-16 leading-relaxed font-medium px-4"
                 >
                     Our automation system converts WhatsApp enquiries into organized leads and scheduled bookings — even when you are offline.
+                    <br />
+                    <span className="text-white/60">Automate enquiries, responses, and bookings across your digital channels.</span>
                 </motion.p>
 
                 <motion.div
@@ -68,7 +70,7 @@ const Hero: React.FC<OfferProps> = ({ onEnroll }) => {
                         <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
                     </button>
 
-                    <button
+                    {/* <button
                         onClick={() => {
                             const element = document.getElementById('contact');
                             if (element) element.scrollIntoView({ behavior: 'smooth' });
@@ -76,7 +78,7 @@ const Hero: React.FC<OfferProps> = ({ onEnroll }) => {
                         className="px-10 py-5 rounded-2xl bg-white/5 border border-white/10 text-white font-black hover:bg-white/10 transition-all w-full sm:w-auto flex items-center justify-center gap-3"
                     >
                         See Live Demo
-                    </button>
+                    </button> */}
                 </motion.div>
 
                 {/* Trust Badges */}
@@ -88,8 +90,8 @@ const Hero: React.FC<OfferProps> = ({ onEnroll }) => {
                 >
                     {[
                         { icon: <ShieldCheck size={18} />, text: "Works with WhatsApp Business" },
-                        { icon: <Zap size={18} />, text: "Setup in 30 minutes" },
-                        { icon: <Star size={18} />, text: "No monthly fee" }
+                        { icon: <Zap size={18} />, text: "Setup within 24 hrs" },
+                        { icon: <Star size={18} />, text: "24/7 Support" }
                     ].map((badge, i) => (
                         <div key={i} className="flex items-center gap-3 text-gray-500 font-black text-[10px] uppercase tracking-widest">
                             <span className="text-primary-green">{badge.icon}</span>

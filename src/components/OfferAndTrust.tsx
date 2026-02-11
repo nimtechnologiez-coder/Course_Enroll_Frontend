@@ -53,7 +53,7 @@ const Offer: React.FC<OfferProps> = ({ onEnroll }) => {
                                             "Complete setup on your number",
                                             "Automatic Lead tracking",
                                             "24/7 Booking system",
-                                            "30-day support"
+                                            // "30-day support"
                                         ].map((item, i) => (
                                             <div key={i} className="flex items-center justify-center gap-3 text-gray-400 font-bold text-sm">
                                                 <ShieldCheck size={16} className="text-primary-green" />
@@ -71,8 +71,8 @@ const Offer: React.FC<OfferProps> = ({ onEnroll }) => {
                                         Our Guarantee
                                     </div>
                                     <h3 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none">
-                                        See Before <br />
-                                        <span className="text-white/40">You Pay.</span>
+                                        One Time <br />
+                                        <span className="text-white/40">Setup.</span>
                                     </h3>
                                     <p className="text-gray-500 text-lg font-medium leading-relaxed">
                                         We show the system working live on your own WhatsApp number before you make any payment.

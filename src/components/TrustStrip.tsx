@@ -9,11 +9,10 @@ const TrustStrip = () => {
                     <p className="text-xs font-black uppercase tracking-[0.4em] text-center md:text-left">
                         Developed by <span className="text-white">Nim Technologies</span>
                     </p>
-                    <div className="hidden md:block w-px h-6 bg-white/10" />
-                    <div className="flex gap-8 text-[11px] font-black uppercase tracking-widest">
-                        <span>LIFETIME ACCESS</span>
-                        <span>CERTIFIED</span>
-                    </div>
+                    {/* <div className="hidden md:block w-px h-6 bg-white/10" />
+                    <div className="flex gap-8 text-[11px] font-black uppercase tracking-widest text-primary-blue/60 group-hover:text-primary-blue transition-colors duration-500">
+                        <span>WhatsApp Automation System</span>
+                    </div> */}
                 </div>
             </div>
         </div>

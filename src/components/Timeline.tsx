@@ -26,7 +26,7 @@ const HowItWorks = () => {
             <div className="container-custom">
                 <div className="text-center mb-24">
                     <h2 className="text-section-title mb-4">How It <span className="text-primary-blue text-glow">Works.</span></h2>
-                    <p className="text-gray-500 max-w-xl mx-auto">No technical knowledge required. We set up everything for you in under 45 minutes.</p>
+                    <p className="text-gray-500 max-w-xl mx-auto">No technical knowledge required. We set up everything for you within 24 hours.</p>
                 </div>
 
                 <div className="max-w-4xl mx-auto space-y-12">

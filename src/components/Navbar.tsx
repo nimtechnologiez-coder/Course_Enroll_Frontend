@@ -64,7 +64,7 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                         }}
                         className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-background transition-all"
                     >
-                        Get Demo
+                        For Enquiry
                     </button>
                 </div>
 
@@ -105,7 +105,7 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                                 }}
                                 className="w-full py-4 bg-primary-green text-background font-black rounded-xl flex items-center justify-center gap-3"
                             >
-                                Get Demo <ArrowRight size={20} />
+                                For Enquiry <ArrowRight size={20} />
                             </button>
                         </div>
                     </motion.div>

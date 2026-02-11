@@ -173,7 +173,7 @@ const ContactSection = () => {
                                 ) : status === 'success' ? (
                                     <><CheckCircle2 size={20} /> Sent Successfully</>
                                 ) : (
-                                    <>Request Demo <Send size={20} /></>
+                                    <>Contact Us <Send size={20} /></>
                                 )}
                             </button>
 
