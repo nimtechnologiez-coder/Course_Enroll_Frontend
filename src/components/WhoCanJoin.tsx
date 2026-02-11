@@ -100,7 +100,7 @@ const WhoThisIsFor = () => {
                     transition={{ delay: 0.6 }}
                     className="mt-24 pt-12 border-t border-white/5 text-center"
                 >
-                    <p className="text-xs font-black uppercase tracking-[0.5em] text-gray-500/60">
+                    <p className="text-xs font-black uppercase tracking-[0.4em] text-gray-500/60">
                         Works for businesses of all sizes and categories.
                     </p>
                 </motion.div>

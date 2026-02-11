@@ -97,7 +97,7 @@ const WhatYouWillBuild = ({ onEnroll }: { onEnroll: (title?: string) => void }) 
                         </div>
                         <h2 className="text-section-title">
                             Your WhatsApp Becomes a <br />
-                            <span className="text-brand-gradient">24/7 Receptionist.</span>
+                            <span className="text-brand-gradient">24/7 Sales Assistant.</span>
                         </h2>
                     </div>
 

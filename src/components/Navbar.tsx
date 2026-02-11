@@ -58,10 +58,12 @@ const Navbar = ({ onEnroll }: { onEnroll: () => void }) => {
                     ))}
 
                     <button
-                        onClick={() => {
-                            const element = document.getElementById('contact');
-                            if (element) element.scrollIntoView({ behavior: 'smooth' });
-                        }}
+                        onClick={() =>
+                            window.open(
+                                "https://docs.google.com/forms/d/e/1FAIpQLSfGNC9Mi3c3DjEaGtzPSGUG3Z5MZpA2dd_ryvgi8dfe3gERjg/viewform?usp=publish-editor",
+                                "_blank"
+                            )
+                        }
                         className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-background transition-all"
                     >
                         For Enquiry

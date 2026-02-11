@@ -13,7 +13,7 @@ import TrustStrip from '../components/TrustStrip';
 import WhatYouWillBuild from '../components/Highlights';
 import Curriculum from '../components/Timeline';
 import WhoThisIsFor from '../components/WhoCanJoin';
-import Offer from '../components/OfferAndTrust';
+import Pricing from '../components/Pricing';
 import ContactSection from '../components/ContactSection';
 import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import Footer from '../components/Footer';
@@ -141,7 +141,7 @@ export default function Home() {
                 <WhatYouWillBuild onEnroll={handleEnrollClick} />
                 <Curriculum />
                 <WhoThisIsFor />
-                <Offer onEnroll={handleEnrollClick} />
+                <Pricing onEnroll={handleEnrollClick} />
                 <ContactSection />
                 <Footer />
             </div>
