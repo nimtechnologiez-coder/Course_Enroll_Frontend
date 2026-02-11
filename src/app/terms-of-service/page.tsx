@@ -42,30 +42,30 @@ export default function TermsPage() {
                 </section>
 
                 <section>
-                    <h3 className="text-xl font-bold text-white mb-4">5. User Conduct</h3>
+                    <h3 className="text-xl font-bold text-white mb-4">5. Acceptable Use</h3>
                     <p className="leading-relaxed">
-                        Any abuse, disruption, automation misuse, or misconduct will result in termination without refund.
+                        You must not use our services for any illegal, harmful, or abusive purpose. This includes spam, harassment, fraud, or any activity that violates WhatsApp’s Terms of Service.
                     </p>
                 </section>
 
                 <section>
-                    <h3 className="text-xl font-bold text-white mb-4">6. Certificates</h3>
+                    <h3 className="text-xl font-bold text-white mb-4">6. Third-Party Platforms</h3>
                     <p className="leading-relaxed">
-                        Certificates are issued only after meeting attendance and completion criteria. Certificates do not guarantee jobs.
+                        Our services integrate with WhatsApp and other platforms. We are not responsible for changes in their policies or service disruptions.
                     </p>
                 </section>
 
                 <section>
-                    <h3 className="text-xl font-bold text-white mb-4">7. Placement Assistance</h3>
+                    <h3 className="text-xl font-bold text-white mb-4">7. Support & Service</h3>
                     <p className="leading-relaxed">
-                        We may offer guidance and referrals, but we do not guarantee placement or salary outcomes.
+                        We provide installation assistance and limited support as described at the time of purchase.
                     </p>
                 </section>
 
                 <section>
-                    <h3 className="text-xl font-bold text-white mb-4">8. Limitation of Liability</h3>
+                    <h3 className="text-xl font-bold text-white mb-4">8. Refund Policy</h3>
                     <p className="leading-relaxed">
-                        We are not responsible for internet issues, device failures, or missed sessions. Liability is limited to the course fee paid.
+                        Since our services are digital and delivered instantly, no refunds will be provided.
                     </p>
                 </section>
 

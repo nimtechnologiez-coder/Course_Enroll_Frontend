@@ -19,4 +19,5 @@ const TrustStrip = () => {
     );
 };
 
+
 export default TrustStrip;

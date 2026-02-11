@@ -14,29 +14,29 @@ export default function PrivacyPage() {
                     <h3 className="text-xl font-bold text-white mb-4">1. Strictly Prohibited</h3>
                     <p className="leading-relaxed mb-4">Users must not:</p>
                     <ul className="list-disc pl-6 space-y-3">
-                        <li>Record classes</li>
-                        <li>Screen capture videos</li>
-                        <li>Share login credentials</li>
-                        <li>Upload materials to any platform</li>
-                        <li>Sell or redistribute content</li>
+                        <li>Attempt to copy, clone, or reverse-engineer the automation system</li>
+                        <li>Share system access, credentials, or configuration with third parties</li>
+                        <li>Modify workflows to bypass licensing or payment</li>
+                        <li>Use the system for spam, bulk unsolicited messaging, or illegal activities</li>
+                        <li>Use the system for fraud, scams, or misleading communication</li>
                     </ul>
                 </section>
 
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">2. Monitoring</h3>
                     <p className="leading-relaxed">
-                        We may use watermarking, IP tracking, and access logs to detect misuse.
+                        To protect service integrity, we may monitor system usage, access patterns, and workflow configurations.
                     </p>
                 </section>
 
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">3. Action on Violation</h3>
                     <p className="leading-relaxed">
-                        If piracy is detected:
+                        If misuse is detected:
                         <ul className="list-disc pl-6 mt-4 space-y-3">
-                            <li>Access will be terminated</li>
-                            <li>Certificate cancelled</li>
-                            <li>Legal action may be initiated under Indian Copyright Act and IT Act</li>
+                            <li>Access to the system will be terminated immediately</li>
+                            <li>Support will be discontinued</li>
+                            <li>License will be cancelled</li>
                             <li>No refund will be provided.</li>
                         </ul>
                     </p>
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
                 <section>
                     <h3 className="text-xl font-bold text-white mb-4">4. Legal & Financial Claims</h3>
                     <p className="leading-relaxed">
-                        We reserve the right to claim damages and legal costs in piracy cases.
+                        Users are responsible for complying with all applicable laws and regulations. Nim Technolo
                     </p>
                 </section>
 
